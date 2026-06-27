@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Best Brands – Herbata, Grzyby, Owoce i Warzywa | Private Label | Kraków</title>
+  <meta name="description" content="Best Brands – nowoczesna firma FMCG z Krakowa. Marki własne (Private Label), eksport, najwyższa jakość. Marki Tea Valley, Forest Valley, Fruit Valley." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --orange: #ea5c24;
+      --orange-dark: #cf4d1a;
+      --grey: #868789;
+      --grey-dark: #4c4d4f;
+      --grey-soft: #f5f5f6;
+      --border: #e6e6e8;
+      --white: #ffffff;
+      --ink: #2f3032;
+      --text: #56585b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; color: var(--text); background: var(--white); line-height: 1.65; }
+    img { display: block; max-width: 100%; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; color: var(--ink); line-height: 1.12; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 1px 0 var(--border), 0 4px 18px rgba(0,0,0,0.05);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 48px;
+    }
+    .nav-logo img { height: 46px; width: auto; }
+    .nav-right { display: flex; align-items: center; gap: 26px; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--grey-dark); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.25s; }
+    .nav-links a:hover { color: var(--orange); }
+    .lang-switcher { display: flex; gap: 14px; }
+    .lang-btn { background: none; border: none; color: var(--grey); font-size: 0.78rem; letter-spacing: 0.1em; padding: 0; cursor: pointer; text-transform: uppercase; font-family: 'Jost', sans-serif; font-weight: 500; transition: color 0.2s; }
+    .lang-btn.active, .lang-btn:hover { color: var(--orange); }
+
+    /* BUTTONS */
+    .btn { display: inline-block; padding: 15px 38px; background: var(--orange); color: #fff; border: 2px solid var(--orange); text-decoration: none; font-size: 0.8rem; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; cursor: pointer; transition: all 0.25s; border-radius: 4px; font-family: 'Jost', sans-serif; }
+    .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--grey); }
+    .btn-ghost:hover { background: var(--grey-dark); border-color: var(--grey-dark); color: #fff; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; position: relative;
+      background: url('img/sekcja.jpg') center/cover no-repeat, #f3f3f4;
+      display: flex; align-items: center;
+      padding: 120px 48px 80px; overflow: hidden;
+      border-bottom: 4px solid var(--orange);
+    }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.85) 42%, rgba(255,255,255,0.25) 75%, rgba(255,255,255,0) 100%); }
+    .hero-inner { position: relative; z-index: 1; max-width: 640px; }
+    .hero-tag { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 18px; font-weight: 700; }
+    .hero h1 { font-weight: 700; font-size: clamp(3rem, 8vw, 5.4rem); margin-bottom: 6px; }
+    .hero h1 span { color: var(--orange); }
+    .hero .slogan { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; color: var(--grey); margin-bottom: 24px; }
+    .hero p { font-size: 1.18rem; font-weight: 300; color: var(--grey-dark); margin-bottom: 36px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* SECTIONS */
+    section { padding: 100px 48px; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; font-weight: 700; }
+    .section-title { font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 22px; }
+    .section-intro { max-width: 660px; color: var(--text); line-height: 1.85; font-weight: 300; font-size: 1.05rem; }
+    .center { text-align: center; }
+    .center .section-intro { margin: 0 auto; }
+
+    .split { display: flex; gap: 70px; align-items: center; }
+    .split .media { flex: 1; min-width: 300px; }
+    .split .media img { width: 100%; height: 460px; object-fit: cover; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.10); }
+    .split .body { flex: 1; }
+    .split .body p { font-weight: 300; line-height: 1.9; margin-bottom: 15px; }
+
+    /* VALUES */
+    .values { background: var(--grey-soft); }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; margin-top: 40px; }
+    .value { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 30px 26px; transition: transform 0.25s, box-shadow 0.25s; }
+    .value:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0,0,0,0.07); }
+    .value .v-ico { width: 52px; height: 52px; border-radius: 12px; background: rgba(234,92,36,0.10); color: var(--orange); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .value .v-ico svg { width: 26px; height: 26px; }
+    .value h3 { font-size: 1.35rem; margin-bottom: 8px; }
+    .value p { font-size: 0.9rem; font-weight: 300; line-height: 1.6; }
+
+    /* PRODUCTS */
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; margin-top: 44px; }
+    .product { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.05); transition: transform 0.25s, box-shadow 0.25s; }
+    .product:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(0,0,0,0.10); }
+    .product img { width: 100%; height: 220px; object-fit: cover; }
+    .product-body { padding: 26px 26px 30px; }
+    .product-body .brand { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); font-weight: 700; }
+    .product-body h3 { font-size: 1.7rem; margin: 6px 0 12px; }
+    .product-body p { font-size: 0.92rem; font-weight: 300; line-height: 1.7; }
+
+    /* EXPORT */
+    .export { background: var(--grey-dark); color: #fff; }
+    .export .section-title { color: #fff; }
+    .export .section-label { color: var(--orange); }
+    .export .export-inner { display: flex; gap: 60px; align-items: center; }
+    .export .body { flex: 1.1; }
+    .export .body p { color: #e7e7e8; font-weight: 300; line-height: 1.9; margin-bottom: 18px; }
+    .export .map { flex: 1; min-width: 300px; }
+    .export .map img { width: 100%; border-radius: 10px; }
+    .country-tags { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .country-tags > span { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.35); border-radius: 30px; padding: 7px 18px; font-size: 0.85rem; color: #fff; }
+
+    /* PRIVATE LABEL */
+    .pl { background: var(--white); }
+    .pl-inner { display: flex; gap: 70px; align-items: center; }
+    .pl .media { flex: 1; min-width: 300px; }
+    .pl .media img { width: 100%; height: 480px; object-fit: cover; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.10); }
+    .pl .body { flex: 1.15; }
+    .pl-list { list-style: none; margin: 26px 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 26px; }
+    .pl-list li { position: relative; padding-left: 30px; font-size: 0.95rem; line-height: 1.5; }
+    .pl-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 700; }
+
+    /* NEWS */
+    .news { background: var(--grey-soft); }
+    .news-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 10px; padding: 34px 38px; max-width: 760px; margin: 40px auto 0; box-shadow: 0 8px 22px rgba(0,0,0,0.05); }
+    .news-card .date { font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+    .news-card h3 { font-size: 1.7rem; margin-bottom: 12px; }
+    .news-card p { font-weight: 300; line-height: 1.8; }
+
+    /* CONTACT */
+    .contact-inner { display: flex; gap: 70px; align-items: flex-start; }
+    .contact-block { flex: 1; }
+    .contact-block h3 { font-size: 1.6rem; margin-bottom: 22px; }
+    .contact-info p { margin-bottom: 14px; font-size: 1rem; line-height: 1.6; }
+    .contact-info a { color: var(--orange); text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+    .map-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+
+    /* FOOTER */
+    footer { background: var(--ink); color: #b7b8ba; text-align: center; padding: 50px 48px; font-size: 0.88rem; }
+    .footer-logo { display: flex; justify-content: center; margin-bottom: 20px; }
+    .footer-logo img { height: 50px; width: auto; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+    .footer-row { margin-bottom: 8px; }
+    .footer-links { margin-top: 16px; }
+    .footer-links a { color: #b7b8ba; text-decoration: none; margin: 0 12px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--orange); }
+
+    /* LANGUAGE */
+    span[data-lang], a[data-lang], li[data-lang] { display: none; }
+    .lang-pl span[data-lang="pl"], .lang-pl a[data-lang="pl"], .lang-pl li[data-lang="pl"] { display: revert; }
+    .lang-en span[data-lang="en"], .lang-en a[data-lang="en"], .lang-en li[data-lang="en"] { display: revert; }
+    div[data-lang], p[data-lang] { display: none; }
+    .lang-pl div[data-lang="pl"], .lang-en div[data-lang="en"],
+    .lang-pl p[data-lang="pl"], .lang-en p[data-lang="en"] { display: block; }
+
+    @media (max-width: 880px) {
+      nav { padding: 12px 18px; }
+      .nav-links { display: none; }
+      section { padding: 70px 22px; }
+      .hero { padding: 110px 22px 70px; }
+      .split, .export .export-inner, .pl-inner, .contact-inner { flex-direction: column; gap: 40px; }
+      .split .media img, .pl .media img { height: 320px; }
+      .pl-list { grid-template-columns: 1fr; }
+      .export .export-inner { flex-direction: column-reverse; }
+    }
+  </style>
+</head>
+<body class="lang-pl">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#top" class="nav-logo"><img src="data:image/png;base64,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" alt="Best Brands" /></a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#about"><span data-lang="pl">O nas</span><span data-lang="en">About</span></a>
+        <a href="#products"><span data-lang="pl">Produkty</span><span data-lang="en">Products</span></a>
+        <a href="#export"><span data-lang="pl">Eksport</span><span data-lang="en">Export</span></a>
+        <a href="#private-label"><span data-lang="pl">Marki własne</span><span data-lang="en">Private Labels</span></a>
+        <a href="#news"><span data-lang="pl">Aktualności</span><span data-lang="en">News</span></a>
+        <a href="#contact"><span data-lang="pl">Kontakt</span><span data-lang="en">Contact</span></a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('pl',this)">PL</button>
+        <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-tag">FMCG • Private Label • Export</div>
+      <h1>Best <span>Brands</span></h1>
+      <div class="slogan">the best… and more</div>
+      <p>
+        <span data-lang="pl">Najlepsze marki, zaufani dostawcy, najwyższa jakość produktów. Tworzymy i rozwijamy marki spożywcze — od herbaty, przez grzyby, po owoce i warzywa.</span>
+        <span data-lang="en">Best brands, trusted suppliers, highest quality products. We create and grow food brands — from tea, through mushrooms, to fruits and vegetables.</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn"><span data-lang="pl">Nasze produkty</span><span data-lang="en">Our products</span></a>
+        <a href="#private-label" class="btn btn-ghost"><span data-lang="pl">Współpraca</span><span data-lang="en">Cooperation</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap split">
+      <div class="media">
+        <img src="img/aboutus.jpg" alt="Best Brands" />
+      </div>
+      <div class="body">
+        <div class="section-label"><span data-lang="pl">O nas</span><span data-lang="en">About us</span></div>
+        <h2 class="section-title"><span data-lang="pl">Pasja, doświadczenie i jakość</span><span data-lang="en">Passion, experience and quality</span></h2>
+        <div data-lang="pl">
+          <p>Best Brands to nowoczesna i dynamicznie rozwijająca się firma, która od początku swojej działalności koncentruje się na produktach z branży FMCG.</p>
+          <p>Pasja, wieloletnie doświadczenie, bogata wiedza oraz jakość w działaniu — to kluczowe słowa, które determinują to, kim dzisiaj jesteśmy. Nazwa firmy jest ściśle związana z jej misją: chcemy dostarczać na rynek produkty wysokiej jakości pod naszymi markami, jak również pod markami własnymi naszych Klientów.</p>
+        </div>
+        <div data-lang="en">
+          <p>Best Brands is a modern and dynamically developing company which, from the beginning of its activity, has focused on FMCG products.</p>
+          <p>Passion, long-lasting experience, vast knowledge and quality of operations — these are the key words which determine who we are. The name of our company is closely related to its mission: to place high quality products on the market under our own brands, as well as under the private labels of our customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="wrap center">
+      <div class="section-label"><span data-lang="pl">Nasze wartości</span><span data-lang="en">Our values</span></div>
+      <h2 class="section-title"><span data-lang="pl">Kluczowe wartości</span><span data-lang="en">Our key values</span></h2>
+      <p class="section-intro"><span data-lang="pl">Cztery zasady, którymi kierujemy się każdego dnia w pracy z produktem i z Klientem.</span><span data-lang="en">Four principles that guide us every day in our work with the product and the customer.</span></p>
+      <div class="values-grid" style="text-align:left;">
+        <div class="value">
+          <div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3><span data-lang="pl">Niezawodność</span><span data-lang="en">Reliable</span></h3>
+          <p><span data-lang="pl">Niezawodność i wiarygodność — można na nas polegać.</span><span data-lang="en">Reliable and trustworthy — you can count on us.</span></p>
+        </div>
+        <div class="value">
+          <div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M8.5 14c-.3-1-.9-1.7-1.6-2.4C5.7 10.5 5 9.3 5 8a7 7 0 0 1 14 0c0 1.3-.7 2.5-1.9 3.6-.7.7-1.3 1.4-1.6 2.4"/></svg></div>
+          <h3><span data-lang="pl">Kreatywność</span><span data-lang="en">Innovative</span></h3>
+          <p><span data-lang="pl">Otwartość, kreatywność i innowacyjność w każdym projekcie.</span><span data-lang="en">Open, creative and innovative in every project.</span></p>
+        </div>
+        <div class="value">
+          <div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3><span data-lang="pl">Profesjonalizm</span><span data-lang="en">Professional</span></h3>
+          <p><span data-lang="pl">Dynamizm i profesjonalizm — działamy szybko i sprawnie.</span><span data-lang="en">Fast and professional — we act quickly and efficiently.</span></p>
+        </div>
+        <div class="value">
+          <div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.5 17 22l-5-3-5 3 1.5-9.5"/></svg></div>
+          <h3><span data-lang="pl">Najwyższa jakość</span><span data-lang="en">Quality driven</span></h3>
+          <p><span data-lang="pl">Jakość jest dla nas najważniejsza na każdym etapie.</span><span data-lang="en">We are quality driven at every stage.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY / INGREDIENTS -->
+  <section id="quality">
+    <div class="wrap split">
+      <div class="body">
+        <div class="section-label"><span data-lang="pl">Surowce</span><span data-lang="en">Ingredients</span></div>
+        <h2 class="section-title"><span data-lang="pl">Naturalne surowce najwyższej jakości</span><span data-lang="en">Natural ingredients of the highest quality</span></h2>
+        <div data-lang="pl">
+          <p>Wykorzystujemy tylko naturalne surowce, starannie wyselekcjonowane i najwyższej jakości. Większość surowców, z których powstaje nasza herbata, pochodzi z Chin, Sri Lanki i Indii. Pozostałe mieszanki importujemy z Niemiec.</p>
+          <p>Dla nas konsument jest najważniejszy, dlatego szczególną uwagę przywiązujemy do surowca. Współpracujemy tylko z solidnymi i sprawdzonymi dostawcami, a wszystkie surowce posiadają niezbędne certyfikaty gwarantujące niezmiennie wysoką jakość.</p>
+        </div>
+        <div data-lang="en">
+          <p>We use only natural, carefully selected ingredients of the highest quality. Most of the ingredients from which our tea is made come from China, Sri Lanka and India. The remaining mixtures are imported from Germany.</p>
+          <p>The consumer is most important to us, therefore we pay special attention to our ingredients. We only cooperate with trusted and reliable suppliers, and all ingredients carry the certificates that guarantee their unchangeably high quality.</p>
+        </div>
+      </div>
+      <div class="media">
+        <img src="img/values.jpg" alt="Naturalne surowce" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="center">
+    <div class="wrap">
+      <div class="section-label"><span data-lang="pl">Produkty</span><span data-lang="en">Products</span></div>
+      <h2 class="section-title"><span data-lang="pl">Nasze marki</span><span data-lang="en">Our brands</span></h2>
+      <p class="section-intro"><span data-lang="pl">Produkty wysokiej jakości, przygotowywane z dbałością o każdy, najdrobniejszy szczegół.</span><span data-lang="en">High quality products, prepared with care and attention to every smallest detail.</span></p>
+      <div class="products-grid" style="text-align:left;">
+        <div class="product">
+          <img src="img/prod_tev.jpg" alt="Tea Valley" />
+          <div class="product-body">
+            <div class="brand">Tea Valley</div>
+            <h3><span data-lang="pl">Herbaty</span><span data-lang="en">Teas</span></h3>
+            <p><span data-lang="pl">Herbaty czarne, zielone, białe i owocowe — z surowców z Chin, Sri Lanki i Indii, komponowane z dbałością o aromat i jakość.</span><span data-lang="en">Black, green, white and fruit teas — from ingredients sourced in China, Sri Lanka and India, blended with care for aroma and quality.</span></p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="img/prod_fv.jpg" alt="Forest Valley" />
+          <div class="product-body">
+            <div class="brand">Forest Valley</div>
+            <h3><span data-lang="pl">Grzyby</span><span data-lang="en">Mushrooms</span></h3>
+            <p><span data-lang="pl">Grzyby i runo leśne najwyższej jakości od sprawdzonych dostawców — naturalne i bezpieczne.</span><span data-lang="en">Premium-quality mushrooms and forest produce from trusted suppliers — natural and safe.</span></p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="img/prod_frv.jpg" alt="Fruit Valley" />
+          <div class="product-body">
+            <div class="brand">Fruit Valley</div>
+            <h3><span data-lang="pl">Owoce i warzywa</span><span data-lang="en">Fruits and vegetables</span></h3>
+            <p><span data-lang="pl">Starannie wyselekcjonowane owoce i warzywa — z dbałością o świeżość i najwyższą jakość.</span><span data-lang="en">Carefully selected fruits and vegetables — with care for freshness and the highest quality.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPORT -->
+  <section id="export" class="export">
+    <div class="wrap export-inner">
+      <div class="body">
+        <div class="section-label"><span data-lang="pl">Eksport</span><span data-lang="en">Export</span></div>
+        <h2 class="section-title"><span data-lang="pl">Otwarci na świat</span><span data-lang="en">Open to the world</span></h2>
+        <div data-lang="pl">
+          <p>Oprócz dystrybucji krajowej bardzo mocno koncentrujemy się na sprzedaży na rynkach zagranicznych. Mamy ogromne doświadczenie i zespół specjalistów, który doskonale radzi sobie ze specyficznymi wymaganiami handlu międzynarodowego.</p>
+          <p>Nieustannie poszukujemy nowych kontaktów, osób i firm zainteresowanych współpracą. Jesteśmy otwarci i elastyczni, a naszą ofertę dostosowujemy indywidualnie do każdego kontrahenta.</p>
+        </div>
+        <div data-lang="en">
+          <p>Apart from domestic distribution, we concentrate heavily on sales on foreign markets. We have a great deal of experience and a team of specialists who perfectly cope with the specific requirements of international trade.</p>
+          <p>We are constantly looking for new contacts, people and companies interested in cooperation. We are open and flexible, and our offer is prepared individually for every client.</p>
+        </div>
+        <div class="country-tags">
+          <span><span data-lang="pl">Litwa</span><span data-lang="en">Lithuania</span></span>
+          <span><span data-lang="pl">Rumunia</span><span data-lang="en">Romania</span></span>
+          <span><span data-lang="pl">Węgry</span><span data-lang="en">Hungary</span></span>
+        </div>
+      </div>
+      <div class="map">
+        <img src="img/export-map.png" alt="Eksport Best Brands" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE LABEL -->
+  <section id="private-label" class="pl">
+    <div class="wrap pl-inner">
+      <div class="media">
+        <img src="img/suppl.jpg" alt="Private Label Best Brands" />
+      </div>
+      <div class="body">
+        <div class="section-label"><span data-lang="pl">Marki własne</span><span data-lang="en">Private Labels</span></div>
+        <h2 class="section-title"><span data-lang="pl">Kompleksowy Private Label</span><span data-lang="en">Comprehensive Private Label</span></h2>
+        <p style="font-weight:300; line-height:1.85;">
+          <span data-lang="pl">Nasze wieloletnie doświadczenie sprawia, że oferujemy kompleksowe rozwiązania Private Label w segmentach herbaty, grzybów, owoców i warzyw. Do każdego Klienta podchodzimy indywidualnie.</span>
+          <span data-lang="en">Our long experience enables us to offer comprehensive Private Label solutions in the areas of tea, mushrooms, fruits and vegetables. We take an individual approach to every client.</span>
+        </p>
+        <ul class="pl-list">
+          <li><span data-lang="pl">Badania rynku</span><span data-lang="en">Market analysis</span></li>
+          <li><span data-lang="pl">Analiza konkurencji</span><span data-lang="en">Competition analysis</span></li>
+          <li><span data-lang="pl">Analiza trendów rynkowych</span><span data-lang="en">Market trends analysis</span></li>
+          <li><span data-lang="pl">Opracowanie planów strategicznych</span><span data-lang="en">Strategic plans development</span></li>
+          <li><span data-lang="pl">Receptura i opakowanie</span><span data-lang="en">Formulas and packaging</span></li>
+          <li><span data-lang="pl">Od koncepcji po półkę sklepową</span><span data-lang="en">From concept to the shelf</span></li>
+        </ul>
+        <a href="#contact" class="btn"><span data-lang="pl">Zapytaj o współpracę</span><span data-lang="en">Ask about cooperation</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="news center">
+    <div class="wrap">
+      <div class="section-label"><span data-lang="pl">Aktualności</span><span data-lang="en">News</span></div>
+      <h2 class="section-title"><span data-lang="pl">Czy wiesz, że…?</span><span data-lang="en">Did you know that…?</span></h2>
+      <div class="news-card" style="text-align:left;">
+        <div class="date">16.02.2017</div>
+        <h3><span data-lang="pl">Zielona herbata</span><span data-lang="en">Green tea</span></h3>
+        <p><span data-lang="pl">Pięć tysięcy lat temu chiński cesarz Shen-Nung, odpoczywając pod drzewem herbacianym, odkrył napar, który dziś znamy jako herbatę. To początek historii, która trwa do dziś — i którą z pasją kontynuujemy.</span><span data-lang="en">Five thousand years ago the Chinese emperor Shen-Nung, resting under a tea tree, discovered the infusion we know today as tea. It is the beginning of a story that continues to this day — and which we proudly carry on.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-block">
+        <div class="section-label"><span data-lang="pl">Kontakt</span><span data-lang="en">Contact</span></div>
+        <h2 class="section-title"><span data-lang="pl">Skontaktuj się z nami</span><span data-lang="en">Get in touch</span></h2>
+        <div class="contact-info">
+          <p>📍 Best Brands<br/>ul. Bronowicka 5/17<br/>30-084 Kraków, <span data-lang="pl">Polska</span><span data-lang="en">Poland</span></p>
+          <p>📞 <a href="tel:+48783438304">+48 783 438 304</a></p>
+          <p>✉️ <a href="mailto:office@best-brands.pl">office@best-brands.pl</a></p>
+          <p style="margin-top:18px; color:var(--grey); font-size:0.9rem;"><span data-lang="pl">Zapraszamy do współpracy wszystkie firmy zainteresowane stworzeniem własnej marki lub dystrybucją.</span><span data-lang="en">All companies interested in creating their own brand or distribution are welcome to cooperate.</span></p>
+        </div>
+      </div>
+      <div class="contact-block">
+        <h3><span data-lang="pl">Lokalizacja</span><span data-lang="en">Location</span></h3>
+        <div class="map-wrap">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=19.8991%2C50.0735%2C19.9111%2C50.0795&layer=mapnik&marker=50.0765145%2C19.9050853"
+            width="100%" height="320" style="border:0;" loading="lazy" title="Best Brands Kraków"></iframe>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bronowicka%205%2C%2030-084%20Krak%C3%B3w" target="_blank" rel="noopener"
+           style="display:inline-block; margin-top:12px; font-size:0.9rem; color:var(--orange); text-decoration:none; font-weight:600;">
+          <span data-lang="pl">↗ Otwórz w Google Maps</span><span data-lang="en">↗ Open in Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><img src="data:image/png;base64,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" alt="Best Brands" /></div>
+    <div class="footer-row">ul. Bronowicka 5/17, 30-084 Kraków &nbsp;|&nbsp; +48 783 438 304 &nbsp;|&nbsp; office@best-brands.pl</div>
+    <div class="footer-row" style="color:#7e7f81;">© 2026 Best Brands. <span data-lang="pl">Wszelkie prawa zastrzeżone.</span><span data-lang="en">All rights reserved.</span></div>
+    <div class="footer-links">
+      <a href="tel:+48783438304"><span data-lang="pl">Zadzwoń</span><span data-lang="en">Call us</span></a>
+      <a href="mailto:office@best-brands.pl">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang, btn) {
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
