@@ -1,0 +1,22 @@
+media:
+  input: img
+  output: /img
+
+content:
+  - name: tresc
+    label: Treść strony
+    type: file
+    path: data.json
+    fields:
+      - name: hero_tagline_pl
+        label: Hasło na stronie głównej (PL)
+        type: text
+      - name: hero_tagline_en
+        label: Hasło na stronie głównej (EN)
+        type: text
+      - name: phone
+        label: Telefon
+        type: string
+      - name: email
+        label: E-mail
+        type: string
